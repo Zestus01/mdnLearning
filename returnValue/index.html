@@ -28,7 +28,7 @@
       return num * num * num;
     }
 
-    function factortial (num){
+    function factorial (num){
       if (num < 0) return undefined;
       if( num === 0) return 1;
       let x = num -1;
@@ -36,6 +36,7 @@
         num *= x;
         x--;
       }
+      return num;
     }
 
   input.addEventListener('change', () => {
@@ -44,7 +45,7 @@
       para.textContent = 'You need to enter a number!';
    } else {
       para.textContent = `${num} squared is ${squared(num)}. `;
-     para.textContent += `${num} cubed is ${cubed(num)}. `;
+      para.textContent += `${num} cubed is ${cubed(num)}. `;
       para.textContent += `${num} factorial is ${factorial(num)}. `;
    }
   });
